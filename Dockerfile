@@ -17,6 +17,8 @@ apt-get update && \
 apt-get -y install docker-ce &&\
 rm -rf /var/lib/apt/lists/*
 
+RUN curl -fsSL https://goss.rocks/install | sh
+
 RUN usermod -a -G docker jenkins
 
 USER jenkins
